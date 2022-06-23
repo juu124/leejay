@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
                         @Override
                         public void onClick(DialogInterface dialogInterface, int i) {
                             Toast.makeText(MainActivity.this, "리스트로 이동", Toast.LENGTH_SHORT).show();
-                            Intent intent = new Intent(MainActivity.this, ListActivity.class);
+                            Intent intent = new Intent(MainActivity.this, CustomActivity.class);
                             startActivity(intent);
                         }
                     });
@@ -85,6 +85,8 @@ public class MainActivity extends AppCompatActivity {
                         @Override
                         public void onClick(DialogInterface dialogInterface, int i) {
                             Toast.makeText(MainActivity.this, "확인", Toast.LENGTH_SHORT).show();
+                            Intent intent = new Intent(MainActivity.this, CustomActivity.class);
+                            startActivity(intent);
                         }
                     });
                     builder.setNegativeButton("취소", new DialogInterface.OnClickListener() {

@@ -11,7 +11,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 public class ListViewAdapter extends BaseAdapter {
-    private ArrayList<ListViewItem> arrayList1 = new ArrayList<ListViewItem>();
+    ArrayList<ListViewItem> arrayList1 = new ArrayList<ListViewItem>();
 
     @Override
     public int getCount() {
@@ -49,5 +49,13 @@ public class ListViewAdapter extends BaseAdapter {
 
         }
         return convertView;
+    }
+    public void addItem(String email, String pwd){
+        ListViewItem item = new ListViewItem();
+        item.setEmail(email);
+        item.setPwd(pwd);
+
+        arrayList1.add(item);
+
     }
 }
